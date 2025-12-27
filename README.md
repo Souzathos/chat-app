@@ -108,9 +108,9 @@ docker run --name postgres-chat \
   -d postgres:16
 
 ## 2️⃣ Backend
-cd backend
-npm install
-npx sequelize-cli db:migrate
+cd backend,
+npm install,
+npx sequelize-cli db:migrate,
 npm start
 
 
@@ -119,8 +119,8 @@ A API estará disponível em:
 http://localhost:3001
 
 ## 3️⃣ Frontend
-cd frontend
-npm install
+cd frontend,
+npm install,
 npm run dev
 
 
