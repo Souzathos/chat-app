@@ -1,10 +1,10 @@
-# 💬 Chat App — Desafio Técnico Full Stack
+# Chat App — Desafio Técnico Full Stack
 
 Este projeto foi desenvolvido como parte de um desafio técnico para desenvolvedor júnior/full stack, com o objetivo de demonstrar conhecimentos práticos em React.js, Node.js (Express), PostgreSQL e Sequelize, além de boas práticas de organização, arquitetura e integração entre frontend e backend.
 
 A aplicação consiste em um chat simples, no qual usuários podem enviar mensagens para um atendente e receber uma resposta automática do sistema, com suporte a atualização em tempo real.
 
-# ✨ Funcionalidades
+# Funcionalidades
 
 Envio de mensagens pelo usuário
 
@@ -18,7 +18,7 @@ Interface responsiva e intuitiva
 
 Persistência de dados em banco PostgreSQL
 
-# 🛠️ Tecnologias Utilizadas
+# Tecnologias Utilizadas
 ## Backend
 
 Node.js
@@ -47,7 +47,7 @@ Axios
 
 Socket.IO Client
 
-# 🧱 Arquitetura
+# Arquitetura
 
 O backend foi estruturado com foco em separação de responsabilidades, facilitando manutenção, leitura e evolução do código:
 
@@ -62,7 +62,7 @@ Services: concentram a regra de negócio e o acesso ao banco de dados
 
 Models: representam as entidades do banco utilizando Sequelize
 
-# 🔄 Fluxo da Aplicação
+# Fluxo da Aplicação
 Comunicação REST (HTTP)
 
 GET /messages → retorna o histórico de mensagens
@@ -79,7 +79,7 @@ O frontend atualiza o chat sem necessidade de recarregar a página ou realizar p
 
 Esse modelo melhora a experiência do usuário e reduz chamadas desnecessárias à API.
 
-# 🗄️ Banco de Dados
+#  Banco de Dados
 Tabela: Messages
 Campo	Tipo	Descrição
 id	integer	Identificador da mensagem
@@ -90,7 +90,7 @@ updatedAt	timestamp	Data e hora da última atualização
 
 As tabelas são criadas utilizando migrations do Sequelize, conforme solicitado no desafio.
 
-# ▶️ Como Executar o Projeto
+#  Como Executar o Projeto
 Pré-requisitos
 
 Node.js
@@ -99,7 +99,7 @@ Docker
 
 NPM
 
-## 1️⃣ Banco de Dados (PostgreSQL via Docker)
+## 1️ Banco de Dados (PostgreSQL via Docker)
 docker run --name postgres-chat \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=postgres \
@@ -107,7 +107,7 @@ docker run --name postgres-chat \
   -p 5432:5432 \
   -d postgres:16
 
-## 2️⃣ Backend
+## 2️ Backend
 cd backend,
 npm install,
 npx sequelize-cli db:migrate,
@@ -118,7 +118,7 @@ A API estará disponível em:
 
 http://localhost:3001
 
-## 3️⃣ Frontend
+## 3️ Frontend
 cd frontend,
 npm install,
 npm run dev
@@ -128,7 +128,7 @@ A aplicação estará disponível em:
 
 http://localhost:5173
 
-# ⭐ Diferencial Implementado
+#  Diferencial Implementado
 
 Como diferencial ao desafio, foi implementado um chat em tempo real utilizando WebSocket (Socket.IO).
 
@@ -141,7 +141,13 @@ Backend atuando como fonte única de verdade
 Esse diferencial melhora a performance e a experiência do usuário.
 
 
-# 👤 Autor
+### .env
+PORT=3001
 
-Athos Felipe Nascimento de Souza
-Projeto desenvolvido como parte de um desafio técnico para avaliação de habilidades em desenvolvimento full stack. 
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_NAME=chat_app
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_DIALECT=postgres
+
