@@ -145,9 +145,14 @@ Esse diferencial melhora a performance e a experiência do usuário.
 PORT=3001
 
 DB_HOST=127.0.0.1
+
 DB_PORT=5432
+
 DB_NAME=chat_app
+
 DB_USER=postgres
+
 DB_PASSWORD=postgres
+
 DB_DIALECT=postgres
 
