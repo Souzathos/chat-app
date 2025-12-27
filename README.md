@@ -81,11 +81,17 @@ Esse modelo melhora a experiência do usuário e reduz chamadas desnecessárias 
 
 #  Banco de Dados
 Tabela: Messages
+
 Campo	Tipo	Descrição
+
 id	integer	Identificador da mensagem
+
 content	text	Conteúdo da mensagem
+
 owner	string	USER ou SYSTEM
+
 createdAt	timestamp	Data e hora de criação
+
 updatedAt	timestamp	Data e hora da última atualização
 
 As tabelas são criadas utilizando migrations do Sequelize, conforme solicitado no desafio.
